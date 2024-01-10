@@ -1,8 +1,7 @@
 import { useState, useCallback } from "react";
 import styled from "styled-components";
 import { css } from '@emotion/css'
-import {useSearchParams, usePathname, useRouter} from 'next/navigation';
-import {router} from "next/client";
+import {useSearchParams, useRouter} from 'next/navigation';
 
 const InputText = styled.input`
   border: 1px solid var(--gris3);
@@ -29,7 +28,6 @@ const InputSubmit = styled.button`
 
 export const Buscar = () => {
     const [busqueda, setBusqueda] = useState("");
-    const pathname = usePathname();
     const searchParams = useSearchParams();
     const router = useRouter();
 
