@@ -1,8 +1,8 @@
 "use client"
+import {useEffect, useState} from "react";
 import {useSearchParams} from "next/navigation";
 import {DetallesProducto} from "../../components/DetallesProducto";
 import {useProductos} from "../../hooks/useProductos";
-import {useEffect, useState} from "react";
 export default function Buscar() {
     const [resultado, setResultado] =useState([])
     const searchParams = useSearchParams()
