@@ -16,9 +16,8 @@ const STATE_INICIAL = {
 }
 
 export default function Login() {
-    const router = useRouter()
-
     const [error, setError]=useState(false)
+    const router = useRouter()
 
     const {valoresIniciales, listaErrores, handleSubmit, handleChange,
         handleBlur}=useValidacion(STATE_INICIAL, validarIniciarSesion, iniciarSesion);

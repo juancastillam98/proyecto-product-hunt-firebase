@@ -4,11 +4,12 @@ import {DetallesProducto} from "../../components/DetallesProducto";
 import {useProductos} from "../../hooks/useProductos";
 import {useEffect, useState} from "react";
 export default function Buscar() {
+    const [resultado, setResultado] =useState([])
     const searchParams = useSearchParams()
+    const {productos}=useProductos("creado")
     const valoresURL = searchParams.get('busqueda')
 
-    const {productos}=useProductos("creado")
-    const [resultado, setResultado] =useState([])
+
    useEffect(()=>{
     const busqueda = valoresURL.toLowerCase();
     const filtro = productos.filter( producto => {

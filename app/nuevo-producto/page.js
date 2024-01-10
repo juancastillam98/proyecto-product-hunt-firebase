@@ -22,12 +22,12 @@ const STATE_INICIAL = {
 export default function NuevoProducto() {
 
     const [error, setError]=useState(false)
-    const {usuario, firebase}=useContext(FirebaseContext)
-    const router = useRouter()
-
     //state de las imagenes
     const [uploading, setUploading]=useState(false)
     const [urlImagen, setUrlImagen]=useState("")
+
+    const router = useRouter()
+    const {usuario, firebase}=useContext(FirebaseContext)
 
     const {
         valoresIniciales,
